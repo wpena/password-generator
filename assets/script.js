@@ -89,7 +89,6 @@ const upperCasedCharacters = [
 ];
 
 const charOptions = [];
-const generatedPassword = '';
 // You can store the generated passowrd as a string and concat each character OR
 // as an array and push each character, once you have enough
 
@@ -120,6 +119,8 @@ function getPasswordOptions() {
   if (setNumeric) charOptions.push(...numericCharacters);
   if (setSpecial) charOptions.push(...specialCharacters);
 
+  return passwordLength;
+
 
   /*
     ! -- Prompt for password length
@@ -138,8 +139,6 @@ function getPasswordOptions() {
 
 }
 
-getPasswordOptions();
-
 // Function for getting a random element from an array
 function getRandom(arr) {
   const randmIndex = Math.floor(Math.random() * arr.length);
@@ -148,32 +147,41 @@ function getRandom(arr) {
   ! -- Need a variable to hold the password as it's being generated
   ! -- Need a variable to hold the index that's being generated
  
-   -- For loop that loops the number of times that matches the length the user chose
-   -- Generate a random number
-   -- That number is going to be the index for character in the mega-array
-   -- So then, mega-array[generate-index] is the actual character
-   -- Add that character to the password
+  ! -- Generate a random number
+  ! -- That number is going to be the index for character in the mega-array
+  ! -- So then, mega-array[generate-index] is the actual character
+  ! -- Add that character to the password
  
-   -- Once finish for loop, return generated password
    */
 
 }
-    
+
 
 // Function to generate password with user input
 function generatePassword() {
+  const passwordLength = getPasswordOptions();
+  let generatedPassword = '';
+
+  for (let i = 0; i < passwordLength; i++) {
+    generatedPassword += getRandom(charOptions);
+  }
+  return generatedPassword;
+
+  // !For loop that loops the number of times that matches the length the user chose
+  // !Once finish for loop, return generated password
   /* 
- -- Generate a password when the button is clicked
- -- Present a series of prompts for password criteria
- -- Length of password
-    -- At least 8 characters but no more than 128.
- -- Character types
-    -- Lowercase
-    -- Uppercase
-    -- Numeric
-    -- Special characters ($@%&*, etc)
- -- Code should validate for each input and at least one character type should be selected
- -- Once prompts are answered then the password should be generated and displayed in an alert or written to the page */
+ !-- Generate a password when the button is clicked
+ !-- Present a series of prompts for password criteria
+ !-- Length of password
+    !-- At least 8 characters but no more than 128.
+! -- Character types
+    !-- Lowercase
+    !-- Uppercase
+    !-- Numeric
+    !-- Special characters ($@%&*, etc)
+ !-- Code should validate for each input and at least one character type should be selected
+ !-- Once prompts are answered then the password should be generated and displayed in an alert or written to the page 
+ */
 }
 
 // Get references to the #generate element
