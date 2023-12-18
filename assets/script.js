@@ -103,6 +103,22 @@ function getPasswordOptions() {
     return;
   }
 
+  const setLowerCase = confirm("Do you want to include lowercase characters?");
+  const setUpperCase = confirm("Do you want to include uppercase characters?");
+  const setNumeric = confirm("Do you want to include numeric characters?");
+  const setSpecial = confirm("Do you want to include special characters?");
+
+  // Checks and validates that at least one character set has been chosen
+  if (!(setLowerCase || setUpperCase || setNumeric || setSpecial)) {
+    alert("At least one character type must be selected.");
+    return;
+  }
+
+  // Adds the selected characters to a new array
+  if (setLowerCase) charOptions.push(...lowerCasedCharacters);
+  if (setUpperCase) charOptions.push(...upperCasedCharacters);
+  if (setNumeric) charOptions.push(...numericCharacters);
+  if (setSpecial) charOptions.push(...specialCharacters);
 
 
   /*
@@ -112,12 +128,12 @@ function getPasswordOptions() {
     ! -- Prompts store data as strings, so need to parse into a number
     ! -- If the user's input is out of range, either return out (exit) of the function or call the function again
     
-     -- Confirm which character sets to use
-     -- If the user answers false for all, either return out (exit) of the function or call the function again
-     -- Either push selected character sets to a mega-array of all selected characters **
+    ! -- Confirm which character sets to use
+    ! -- If the user answers false for all, either return out (exit) of the function or call the function again
+    ! -- Either push selected character sets to a mega-array of all selected characters **
      -- OR you can keep the arrays separate and generate a random number to select the array and another to select the index
     
-      -- Once the character sets are selected, move on to generating random characters
+    !  -- Once the character sets are selected, move on to generating random characters
   */
 
 }
