@@ -142,9 +142,11 @@ getPasswordOptions();
 
 // Function for getting a random element from an array
 function getRandom(arr) {
+  const randmIndex = Math.floor(Math.random() * arr.length);
+  return arr[randmIndex]
   /*
-   -- Need a variable to hold the password as it's being generated
-   -- Need a variable to hold the index that's being generated
+  ! -- Need a variable to hold the password as it's being generated
+  ! -- Need a variable to hold the index that's being generated
  
    -- For loop that loops the number of times that matches the length the user chose
    -- Generate a random number
@@ -156,6 +158,7 @@ function getRandom(arr) {
    */
 
 }
+    
 
 // Function to generate password with user input
 function generatePassword() {
