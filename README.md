@@ -14,14 +14,16 @@ These options, will ask you to confirm whether you would like to include lowerca
 Once, you've selected the options that you want, a password will be generated and displayed in the box.
 
 ## Expected Result
-
+![password-generator-expected-img](https://github.com/wpena/password-generator/assets/38634790/f9a86cbd-a5c6-4bc0-b3c9-158144f97b7a)\
+![password-generator-expected-criteria](https://github.com/wpena/password-generator/assets/38634790/e7bdeca9-7433-4aa8-b330-986440ea11d5)
 
 ## Result
-Below is a screenshot example of a generated password.\
-
+Below is an example of a generated password.\
+![password-generator-result-gif](https://github.com/wpena/password-generator/assets/38634790/906ff860-cec1-4796-863a-bc4d483c249e)
 
 ## Credits
-Used: https://oprearocks.medium.com/what-do-the-three-dots-mean-in-javascript-bc5749439c9a - to assist me with pushing selected characters into a new array
+Used:\
+https://oprearocks.medium.com/what-do-the-three-dots-mean-in-javascript-bc5749439c9a - to assist me with pushing selected characters into a new array\
 https://www.youtube.com/watch?v=1cdXwYEFDAg - assisted me with generating random index
 
 ## License
